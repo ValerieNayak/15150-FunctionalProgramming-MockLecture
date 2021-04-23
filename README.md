@@ -37,10 +37,10 @@ fun fact_cps n k =
 ```
 Observe how now, we've moved our additional computation into our continuation function.
 
-#### Evaluation trace of CPS sum over a list function
+### Evaluation trace of CPS sum over a list function
 [Here are some great notes](http://www.cs.cmu.edu/~15150/resources/lectures/12/csum.pdf) created by Prof. Erdmann that walks through the same example we did, step by step. I'll also add the PDF to the GitHub for easy access.
 
-#### Tree Search: Uses success and failure continuations
+### Tree Search: Uses success and failure continuations
 Sometimes, you can have **more than one continuation function**. (Wild, right?) Sometimes you use **success and failure continuations** so you can have different behavior depending on if you "succeed" or "fail." A good example of this is search, where success means you found what you're looking for and failure means you didn't. Here's some code for tree search using CPS.
 ```
 datatype 'a tree = EMPTY | Node of 'a tree * 'a * 'a tree
